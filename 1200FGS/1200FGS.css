@@ -1,0 +1,649 @@
+@charset "UTF-8";
+/* Codificação para caracteres especiais */
+/*
+
+	1200 Fluid Grid Systen | Sistema de grid fluido | v 1.0
+
+	Repositório: https://github.com/afonsopacifer/1200-FGS
+	Licença MIT: https://github.com/afonsopacifer/1200-FGS/Licence.md
+
+*/
+/* Configuração Global
+----------------------------------------------------------------------------------------------------*/
+/* Configuração das margens
+----------------------------------------------------------------------------------------------------*/
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 24 colunas | Proporção de 1 para 1
+----------------------------------------------------------------------------------------------------*/
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 12 colunas | proporção de 1 para 2
+----------------------------------------------------------------------------------------------------*/
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 8 colunas | proporção de 1 para 3
+----------------------------------------------------------------------------------------------------*/
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 4 colunas | proporção de 1 para 6
+----------------------------------------------------------------------------------------------------*/
+/* Box Model
+----------------------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Configuração Golbal das Colunas
+----------------------------------------------------------------------------------------------------*/
+.col-1-xl,
+.col-2-xl,
+.col-3-xl,
+.col-4-xl,
+.col-5-xl,
+.col-6-xl,
+.col-7-xl,
+.col-8-xl,
+.col-9-xl,
+.col-10-xl,
+.col-11-xl,
+.col-12-xl,
+.col-13-xl,
+.col-14-xl,
+.col-15-xl,
+.col-16-xl,
+.col-17-xl,
+.col-18-xl,
+.col-19-xl,
+.col-20-xl,
+.col-21-xl,
+.col-22-xl,
+.col-23-xl,
+.col-24-xl,
+.col-1-lg,
+.col-2-lg,
+.col-3-lg,
+.col-4-lg,
+.col-5-lg,
+.col-6-lg,
+.col-7-lg,
+.col-8-lg,
+.col-9-lg,
+.col-10-lg,
+.col-11-lg,
+.col-12-lg,
+.col-1-md,
+.col-2-md,
+.col-3-md,
+.col-4-md,
+.col-5-md,
+.col-6-md,
+.col-7-md,
+.col-8-md,
+.col-1-sm,
+.col-2-sm,
+.col-3-sm,
+.col-4-sm {
+  display: inline;
+  float: left;
+  margin-left: 0.52083%;
+  margin-right: 0.52083%; }
+
+/* Configuração Golbal das Linhas
+----------------------------------------------------------------------------------------------------*/
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
+/* Grid de 4 colunas independente (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+.grid-4 .row {
+  max-width: 480px; }
+  .grid-4 .row .col-1-sm {
+    width: 23.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .col-2-sm {
+    width: 48.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .col-3-sm {
+    width: 73.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .col-4-sm {
+    width: 98.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .pfx-1-sm {
+    margin-left: 25.52083%; }
+  .grid-4 .row .pfx-2-sm {
+    margin-left: 50.52083%; }
+  .grid-4 .row .pfx-3-sm {
+    margin-left: 75.52083%; }
+  .grid-4 .row .sfx-1-sm {
+    margin-right: 25.52083%; }
+  .grid-4 .row .sfx-2-sm {
+    margin-right: 50.52083%; }
+  .grid-4 .row .sfx-3-sm {
+    margin-right: 75.52083%; }
+
+/* Grid de 8 colunas independente (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+.grid-8 .row {
+  max-width: 768px; }
+  .grid-8 .row .col-1-md {
+    width: 11.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-2-md {
+    width: 23.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-3-md {
+    width: 36.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-4-md {
+    width: 48.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-5-md {
+    width: 61.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-6-md {
+    width: 73.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-7-md {
+    width: 86.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-8-md {
+    width: 98.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .pfx-1-md {
+    margin-left: 13.02083%; }
+  .grid-8 .row .pfx-2-md {
+    margin-left: 25.52083%; }
+  .grid-8 .row .pfx-3-md {
+    margin-left: 38.02083%; }
+  .grid-8 .row .pfx-4-md {
+    margin-left: 50.52083%; }
+  .grid-8 .row .pfx-5-md {
+    margin-left: 63.02083%; }
+  .grid-8 .row .pfx-6-md {
+    margin-left: 75.52083%; }
+  .grid-8 .row .pfx-7-md {
+    margin-left: 88.02083%; }
+  .grid-8 .row .sfx-1-md {
+    margin-right: 13.02083%; }
+  .grid-8 .row .sfx-2-md {
+    margin-right: 25.52083%; }
+  .grid-8 .row .sfx-3-md {
+    margin-right: 38.02083%; }
+  .grid-8 .row .sfx-4-md {
+    margin-right: 50.52083%; }
+  .grid-8 .row .sfx-5-md {
+    margin-right: 63.02083%; }
+  .grid-8 .row .sfx-6-md {
+    margin-right: 75.52083%; }
+  .grid-8 .row .sfx-7-md {
+    margin-right: 88.02083%; }
+
+/* Grid de 12 colunas independente (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+.grid-12 .row {
+  max-width: 1024px; }
+  .grid-12 .row .col-1-lg {
+    width: 7.29177%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-2-lg {
+    width: 15.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-3-lg {
+    width: 23.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-4-lg {
+    width: 32.29167%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-5-lg {
+    width: 40.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-6-lg {
+    width: 48.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-7-lg {
+    width: 57.29167%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-8-lg {
+    width: 65.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-9-lg {
+    width: 73.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-10-lg {
+    width: 82.29167%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-11-lg {
+    width: 90.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-12-lg {
+    width: 98.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .pfx-1-lg {
+    margin-left: 8.85427%; }
+  .grid-12 .row .pfx-2-lg {
+    margin-left: 17.1875%; }
+  .grid-12 .row .pfx-3-lg {
+    margin-left: 25.52083%; }
+  .grid-12 .row .pfx-4-lg {
+    margin-left: 33.85417%; }
+  .grid-12 .row .pfx-5-lg {
+    margin-left: 42.1875%; }
+  .grid-12 .row .pfx-6-lg {
+    margin-left: 50.52083%; }
+  .grid-12 .row .pfx-7-lg {
+    margin-left: 58.85417%; }
+  .grid-12 .row .pfx-8-lg {
+    margin-left: 67.1875%; }
+  .grid-12 .row .pfx-9-lg {
+    margin-left: 75.52083%; }
+  .grid-12 .row .pfx-10-lg {
+    margin-left: 83.85417%; }
+  .grid-12 .row .pfx-11-lg {
+    margin-left: 92.1875%; }
+  .grid-12 .row .sfx-1-lg {
+    margin-right: 8.85427%; }
+  .grid-12 .row .sfx-2-lg {
+    margin-right: 17.1875%; }
+  .grid-12 .row .sfx-3-lg {
+    margin-right: 25.52083%; }
+  .grid-12 .row .sfx-4-lg {
+    margin-right: 33.85417%; }
+  .grid-12 .row .sfx-5-lg {
+    margin-right: 42.1875%; }
+  .grid-12 .row .sfx-6-lg {
+    margin-right: 50.52083%; }
+  .grid-12 .row .sfx-7-lg {
+    margin-right: 58.85417%; }
+  .grid-12 .row .sfx-8-lg {
+    margin-right: 67.1875%; }
+  .grid-12 .row .sfx-9-lg {
+    margin-right: 75.52083%; }
+  .grid-12 .row .sfx-10-lg {
+    margin-right: 83.85417%; }
+  .grid-12 .row .sfx-11-lg {
+    margin-right: 92.1875%; }
+
+/* Grid de 24 colunas independente
+----------------------------------------------------------------------------------------------------*/
+.grid-24 .row {
+  max-width: 1200px; }
+  .grid-24 .row .col-1-xl {
+    width: 3.125%; }
+  .grid-24 .row .col-2-xl {
+    width: 7.29177%; }
+  .grid-24 .row .col-3-xl {
+    width: 11.45833%; }
+  .grid-24 .row .col-4-xl {
+    width: 15.625%; }
+  .grid-24 .row .col-5-xl {
+    width: 19.79167%; }
+  .grid-24 .row .col-6-xl {
+    width: 23.95833%; }
+  .grid-24 .row .col-7-xl {
+    width: 28.125%; }
+  .grid-24 .row .col-8-xl {
+    width: 32.29167%; }
+  .grid-24 .row .col-9-xl {
+    width: 36.45833%; }
+  .grid-24 .row .col-10-xl {
+    width: 40.625%; }
+  .grid-24 .row .col-11-xl {
+    width: 44.79167%; }
+  .grid-24 .row .col-12-xl {
+    width: 48.95833%; }
+  .grid-24 .row .col-13-xl {
+    width: 53.125%; }
+  .grid-24 .row .col-14-xl {
+    width: 57.29167%; }
+  .grid-24 .row .col-15-xl {
+    width: 61.45833%; }
+  .grid-24 .row .col-16-xl {
+    width: 65.625%; }
+  .grid-24 .row .col-17-xl {
+    width: 69.79167%; }
+  .grid-24 .row .col-18-xl {
+    width: 73.95833%; }
+  .grid-24 .row .col-19-xl {
+    width: 78.125%; }
+  .grid-24 .row .col-20-xl {
+    width: 82.29167%; }
+  .grid-24 .row .col-21-xl {
+    width: 86.45833%; }
+  .grid-24 .row .col-22-xl {
+    width: 90.625%; }
+  .grid-24 .row .col-23-xl {
+    width: 94.79167%; }
+  .grid-24 .row .col-24-xl {
+    width: 98.95833%; }
+  .grid-24 .row .pfx-1-xl {
+    margin-left: 4.6875%; }
+  .grid-24 .row .pfx-2-xl {
+    margin-left: 8.85427%; }
+  .grid-24 .row .pfx-3-xl {
+    margin-left: 13.02083%; }
+  .grid-24 .row .pfx-4-xl {
+    margin-left: 17.1875%; }
+  .grid-24 .row .pfx-5-xl {
+    margin-left: 21.35417%; }
+  .grid-24 .row .pfx-6-xl {
+    margin-left: 25.52083%; }
+  .grid-24 .row .pfx-7-xl {
+    margin-left: 29.6875%; }
+  .grid-24 .row .pfx-8-xl {
+    margin-left: 33.85417%; }
+  .grid-24 .row .pfx-9-xl {
+    margin-left: 38.02083%; }
+  .grid-24 .row .pfx-10-xl {
+    margin-left: 42.1875%; }
+  .grid-24 .row .pfx-11-xl {
+    margin-left: 46.35417%; }
+  .grid-24 .row .pfx-12-xl {
+    margin-left: 50.52083%; }
+  .grid-24 .row .pfx-13-xl {
+    margin-left: 54.6875%; }
+  .grid-24 .row .pfx-14-xl {
+    margin-left: 58.85417%; }
+  .grid-24 .row .pfx-15-xl {
+    margin-left: 63.02083%; }
+  .grid-24 .row .pfx-16-xl {
+    margin-left: 67.1875%; }
+  .grid-24 .row .pfx-17-xl {
+    margin-left: 71.35417%; }
+  .grid-24 .row .pfx-18-xl {
+    margin-left: 75.52083%; }
+  .grid-24 .row .pfx-19-xl {
+    margin-left: 79.6875%; }
+  .grid-24 .row .pfx-20-xl {
+    margin-left: 83.85417%; }
+  .grid-24 .row .pfx-21-xl {
+    margin-left: 88.02083%; }
+  .grid-24 .row .pfx-22-xl {
+    margin-left: 92.1875%; }
+  .grid-24 .row .pfx-23-xl {
+    margin-left: 96.35417%; }
+  .grid-24 .row .sfx-1-xl {
+    margin-right: 4.6875%; }
+  .grid-24 .row .sfx-2-xl {
+    margin-right: 8.85427%; }
+  .grid-24 .row .sfx-3-xl {
+    margin-right: 13.02083%; }
+  .grid-24 .row .sfx-4-xl {
+    margin-right: 17.1875%; }
+  .grid-24 .row .sfx-5-xl {
+    margin-right: 21.35417%; }
+  .grid-24 .row .sfx-6-xl {
+    margin-right: 25.52083%; }
+  .grid-24 .row .sfx-7-xl {
+    margin-right: 29.6875%; }
+  .grid-24 .row .sfx-8-xl {
+    margin-right: 33.85417%; }
+  .grid-24 .row .sfx-9-xl {
+    margin-right: 38.02083%; }
+  .grid-24 .row .sfx-10-xl {
+    margin-right: 42.1875%; }
+  .grid-24 .row .sfx-11-xl {
+    margin-right: 46.35417%; }
+  .grid-24 .row .sfx-12-xl {
+    margin-right: 50.52083%; }
+  .grid-24 .row .sfx-13-xl {
+    margin-right: 54.6875%; }
+  .grid-24 .row .sfx-14-xl {
+    margin-right: 58.85417%; }
+  .grid-24 .row .sfx-15-xl {
+    margin-right: 63.02083%; }
+  .grid-24 .row .sfx-16-xl {
+    margin-right: 67.1875%; }
+  .grid-24 .row .sfx-17-xl {
+    margin-right: 71.35417%; }
+  .grid-24 .row .sfx-18-xl {
+    margin-right: 75.52083%; }
+  .grid-24 .row .sfx-19-xl {
+    margin-right: 79.6875%; }
+  .grid-24 .row .sfx-20-xl {
+    margin-right: 83.85417%; }
+  .grid-24 .row .sfx-21-xl {
+    margin-right: 88.02083%; }
+  .grid-24 .row .sfx-22-xl {
+    margin-right: 92.1875%; }
+  .grid-24 .row .sfx-23-xl {
+    margin-right: 96.35417%; }
+
+/* Grid de 12 colunas condicional a exsstência de um grid maior (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+  .grid-12 .row .col-1-lg {
+    width: 7.29177%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-2-lg {
+    width: 15.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-3-lg {
+    width: 23.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-4-lg {
+    width: 32.29167%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-5-lg {
+    width: 40.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-6-lg {
+    width: 48.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-7-lg {
+    width: 57.29167%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-8-lg {
+    width: 65.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-9-lg {
+    width: 73.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-10-lg {
+    width: 82.29167%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-11-lg {
+    width: 90.625%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .col-12-lg {
+    width: 98.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-12 .row .pfx-1-lg {
+    margin-left: 8.85427%; }
+  .grid-12 .row .pfx-2-lg {
+    margin-left: 17.1875%; }
+  .grid-12 .row .pfx-3-lg {
+    margin-left: 25.52083%; }
+  .grid-12 .row .pfx-4-lg {
+    margin-left: 33.85417%; }
+  .grid-12 .row .pfx-5-lg {
+    margin-left: 42.1875%; }
+  .grid-12 .row .pfx-6-lg {
+    margin-left: 50.52083%; }
+  .grid-12 .row .pfx-7-lg {
+    margin-left: 58.85417%; }
+  .grid-12 .row .pfx-8-lg {
+    margin-left: 67.1875%; }
+  .grid-12 .row .pfx-9-lg {
+    margin-left: 75.52083%; }
+  .grid-12 .row .pfx-10-lg {
+    margin-left: 83.85417%; }
+  .grid-12 .row .pfx-11-lg {
+    margin-left: 92.1875%; }
+  .grid-12 .row .sfx-1-lg {
+    margin-right: 8.85427%; }
+  .grid-12 .row .sfx-2-lg {
+    margin-right: 17.1875%; }
+  .grid-12 .row .sfx-3-lg {
+    margin-right: 25.52083%; }
+  .grid-12 .row .sfx-4-lg {
+    margin-right: 33.85417%; }
+  .grid-12 .row .sfx-5-lg {
+    margin-right: 42.1875%; }
+  .grid-12 .row .sfx-6-lg {
+    margin-right: 50.52083%; }
+  .grid-12 .row .sfx-7-lg {
+    margin-right: 58.85417%; }
+  .grid-12 .row .sfx-8-lg {
+    margin-right: 67.1875%; }
+  .grid-12 .row .sfx-9-lg {
+    margin-right: 75.52083%; }
+  .grid-12 .row .sfx-10-lg {
+    margin-right: 83.85417%; }
+  .grid-12 .row .sfx-11-lg {
+    margin-right: 92.1875%; } }
+/* Grid de 8 colunas condicional a exsstência de um grid maior (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .grid-8 .row .col-1-md {
+    width: 11.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-2-md {
+    width: 23.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-3-md {
+    width: 36.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-4-md {
+    width: 48.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-5-md {
+    width: 61.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-6-md {
+    width: 73.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-7-md {
+    width: 86.45833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .col-8-md {
+    width: 98.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-8 .row .pfx-1-md {
+    margin-left: 13.02083%; }
+  .grid-8 .row .pfx-2-md {
+    margin-left: 25.52083%; }
+  .grid-8 .row .pfx-3-md {
+    margin-left: 38.02083%; }
+  .grid-8 .row .pfx-4-md {
+    margin-left: 50.52083%; }
+  .grid-8 .row .pfx-5-md {
+    margin-left: 63.02083%; }
+  .grid-8 .row .pfx-6-md {
+    margin-left: 75.52083%; }
+  .grid-8 .row .pfx-7-md {
+    margin-left: 88.02083%; }
+  .grid-8 .row .sfx-1-md {
+    margin-right: 13.02083%; }
+  .grid-8 .row .sfx-2-md {
+    margin-right: 25.52083%; }
+  .grid-8 .row .sfx-3-md {
+    margin-right: 38.02083%; }
+  .grid-8 .row .sfx-4-md {
+    margin-right: 50.52083%; }
+  .grid-8 .row .sfx-5-md {
+    margin-right: 63.02083%; }
+  .grid-8 .row .sfx-6-md {
+    margin-right: 75.52083%; }
+  .grid-8 .row .sfx-7-md {
+    margin-right: 88.02083%; } }
+/* Grid de 4 colunas condicional a exsstência de um grid maior (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  .grid-4 .row .col-1-sm {
+    width: 23.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .col-2-sm {
+    width: 48.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .col-3-sm {
+    width: 73.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .col-4-sm {
+    width: 98.95833%;
+    margin-left: 0.52083%;
+    margin-right: 0.52083%; }
+  .grid-4 .row .pfx-1-sm {
+    margin-left: 25.52083%; }
+  .grid-4 .row .pfx-2-sm {
+    margin-left: 50.52083%; }
+  .grid-4 .row .pfx-3-sm {
+    margin-left: 75.52083%; }
+  .grid-4 .row .sfx-1-sm {
+    margin-right: 25.52083%; }
+  .grid-4 .row .sfx-2-sm {
+    margin-right: 50.52083%; }
+  .grid-4 .row .sfx-3-sm {
+    margin-right: 75.52083%; } }
+/* Da uma quebra de linha, cancelando o fluxo dos elementos flutuante, sem afetar a flutuação das outras divs
+Deve ser chamada em uma div vazia apenas para marcar a quebra de linha.
+ex: <div class = "clear"></div>
+----------------------------------------------------------------------------------------------------*/
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/* Propriedades para correção de bugs */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0; }
+
+.clearfix:after,
+.row:after {
+  clear: both; }

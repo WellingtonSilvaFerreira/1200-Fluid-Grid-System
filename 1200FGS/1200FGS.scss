@@ -1,0 +1,575 @@
+@charset "UTF-8"; /* Codificação para caracteres especiais */
+
+/*
+
+	1200 Fluid Grid Systen | Sistema de grid fluido | v 1.0
+
+	Repositório: https://github.com/afonsopacifer/1200-FGS
+	Licença MIT: https://github.com/afonsopacifer/1200-FGS/Licence.md
+
+*/
+
+/* Configuração Global
+----------------------------------------------------------------------------------------------------*/
+$max-width-24-cols-grid: 1200px;
+$max-width-12-cols-grid: 1024px;
+$max-width-8-cols-grid:   768px;
+$max-width-4-cols-grid:   480px;
+
+/* Configuração das margens
+----------------------------------------------------------------------------------------------------*/
+$margin-left:  0.5208333333333333%;
+$margin-right: 0.5208333333333333%;
+
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 24 colunas | Proporção de 1 para 1
+----------------------------------------------------------------------------------------------------*/
+$col-1-grid-24  :  3.125%;
+$col-2-grid-24  :  7.291766666666666%;     
+$col-3-grid-24  : 11.45833333333333%;     
+$col-4-grid-24  : 15.625%;                
+$col-5-grid-24  : 19.79166666666667%;     
+$col-6-grid-24  : 23.95833333333333%;     
+$col-7-grid-24  : 28.125%;                
+$col-8-grid-24  : 32.29166666666667%;     
+$col-9-grid-24  : 36.45833333333333%;     
+$col-10-grid-24 : 40.625%;                
+$col-11-grid-24 : 44.79166666666667%;     
+$col-12-grid-24 : 48.95833333333333%;     
+$col-13-grid-24 : 53.125%;                
+$col-14-grid-24 : 57.29166666666667%;     
+$col-15-grid-24 : 61.45833333333333%;     
+$col-16-grid-24 : 65.625%;                
+$col-17-grid-24 : 69.79166666666667%;     
+$col-18-grid-24 : 73.95833333333333%;     
+$col-19-grid-24 : 78.125%;                
+$col-20-grid-24 : 82.29166666666667%;     
+$col-21-grid-24 : 86.45833333333333%;     
+$col-22-grid-24 : 90.625%;                
+$col-23-grid-24 : 94.79166666666667%;     
+$col-24-grid-24 : 98.95833333333333%;     
+
+$pfx-1-grid-24   : ($col-1-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-2-grid-24   : ($col-2-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-3-grid-24   : ($col-3-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-4-grid-24   : ($col-4-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-5-grid-24   : ($col-5-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-6-grid-24   : ($col-6-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-7-grid-24   : ($col-7-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-8-grid-24   : ($col-8-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-9-grid-24   : ($col-9-grid-24  + $margin-left + $margin-right) + $margin-left;
+$pfx-10-grid-24  : ($col-10-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-11-grid-24  : ($col-11-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-12-grid-24  : ($col-12-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-13-grid-24  : ($col-13-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-14-grid-24  : ($col-14-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-15-grid-24  : ($col-15-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-16-grid-24  : ($col-16-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-17-grid-24  : ($col-17-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-18-grid-24  : ($col-18-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-19-grid-24  : ($col-19-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-20-grid-24  : ($col-20-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-21-grid-24  : ($col-21-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-22-grid-24  : ($col-22-grid-24 + $margin-left + $margin-right) + $margin-left;
+$pfx-23-grid-24  : ($col-23-grid-24 + $margin-left + $margin-right) + $margin-left;
+
+$sfx-1-grid-24   : ($col-1-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-2-grid-24   : ($col-2-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-3-grid-24   : ($col-3-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-4-grid-24   : ($col-4-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-5-grid-24   : ($col-5-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-6-grid-24   : ($col-6-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-7-grid-24   : ($col-7-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-8-grid-24   : ($col-8-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-9-grid-24   : ($col-9-grid-24  + $margin-left + $margin-right) + $margin-right;
+$sfx-10-grid-24  : ($col-10-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-11-grid-24  : ($col-11-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-12-grid-24  : ($col-12-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-13-grid-24  : ($col-13-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-14-grid-24  : ($col-14-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-15-grid-24  : ($col-15-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-16-grid-24  : ($col-16-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-17-grid-24  : ($col-17-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-18-grid-24  : ($col-18-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-19-grid-24  : ($col-19-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-20-grid-24  : ($col-20-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-21-grid-24  : ($col-21-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-22-grid-24  : ($col-22-grid-24 + $margin-left + $margin-right) + $margin-right;
+$sfx-23-grid-24  : ($col-23-grid-24 + $margin-left + $margin-right) + $margin-right;
+
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 12 colunas | proporção de 1 para 2
+----------------------------------------------------------------------------------------------------*/
+$col-1-grid-12  : $col-2-grid-24;
+$col-2-grid-12  : $col-4-grid-24;   
+$col-3-grid-12  : $col-6-grid-24;     
+$col-4-grid-12  : $col-8-grid-24;                
+$col-5-grid-12  : $col-10-grid-24;      
+$col-6-grid-12  : $col-12-grid-24;      
+$col-7-grid-12  : $col-14-grid-24;                 
+$col-8-grid-12  : $col-16-grid-24;      
+$col-9-grid-12  : $col-18-grid-24;      
+$col-10-grid-12 : $col-20-grid-24;                 
+$col-11-grid-12 : $col-22-grid-24;      
+$col-12-grid-12 : $col-24-grid-24;
+
+$pfx-1-grid-12  : $pfx-2-grid-24;
+$pfx-2-grid-12  : $pfx-4-grid-24;   
+$pfx-3-grid-12  : $pfx-6-grid-24;     
+$pfx-4-grid-12  : $pfx-8-grid-24;                
+$pfx-5-grid-12  : $pfx-10-grid-24;      
+$pfx-6-grid-12  : $pfx-12-grid-24;      
+$pfx-7-grid-12  : $pfx-14-grid-24;                 
+$pfx-8-grid-12  : $pfx-16-grid-24;      
+$pfx-9-grid-12  : $pfx-18-grid-24;      
+$pfx-10-grid-12 : $pfx-20-grid-24;                 
+$pfx-11-grid-12 : $pfx-22-grid-24;      
+
+$sfx-1-grid-12  : $sfx-2-grid-24;
+$sfx-2-grid-12  : $sfx-4-grid-24;   
+$sfx-3-grid-12  : $sfx-6-grid-24;     
+$sfx-4-grid-12  : $sfx-8-grid-24;                
+$sfx-5-grid-12  : $sfx-10-grid-24;      
+$sfx-6-grid-12  : $sfx-12-grid-24;      
+$sfx-7-grid-12  : $sfx-14-grid-24;                 
+$sfx-8-grid-12  : $sfx-16-grid-24;      
+$sfx-9-grid-12  : $sfx-18-grid-24;      
+$sfx-10-grid-12 : $sfx-20-grid-24;                 
+$sfx-11-grid-12 : $sfx-22-grid-24;      
+
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 8 colunas | proporção de 1 para 3
+----------------------------------------------------------------------------------------------------*/
+$col-1-grid-8 : $col-3-grid-24;
+$col-2-grid-8 : $col-6-grid-24;
+$col-3-grid-8 : $col-9-grid-24;
+$col-4-grid-8 : $col-12-grid-24;
+$col-5-grid-8 : $col-15-grid-24;
+$col-6-grid-8 : $col-18-grid-24;
+$col-7-grid-8 : $col-21-grid-24;
+$col-8-grid-8 : $col-24-grid-24;
+
+$pfx-1-grid-8 : $pfx-3-grid-24;
+$pfx-2-grid-8 : $pfx-6-grid-24;
+$pfx-3-grid-8 : $pfx-9-grid-24;
+$pfx-4-grid-8 : $pfx-12-grid-24;
+$pfx-5-grid-8 : $pfx-15-grid-24;
+$pfx-6-grid-8 : $pfx-18-grid-24;
+$pfx-7-grid-8 : $pfx-21-grid-24;
+
+$sfx-1-grid-8 : $sfx-3-grid-24;
+$sfx-2-grid-8 : $sfx-6-grid-24;
+$sfx-3-grid-8 : $sfx-9-grid-24;
+$sfx-4-grid-8 : $sfx-12-grid-24;
+$sfx-5-grid-8 : $sfx-15-grid-24;
+$sfx-6-grid-8 : $sfx-18-grid-24;
+$sfx-7-grid-8 : $sfx-21-grid-24;
+
+/* Largura das colunas + margens dos prefixos + margens sufixos no grid com 4 colunas | proporção de 1 para 6
+----------------------------------------------------------------------------------------------------*/
+$col-1-grid-4 : $col-6-grid-24;
+$col-2-grid-4 : $col-12-grid-24;
+$col-3-grid-4 : $col-18-grid-24;
+$col-4-grid-4 : $col-24-grid-24;
+
+$pfx-1-grid-4 : $pfx-6-grid-24;
+$pfx-2-grid-4 : $pfx-12-grid-24;
+$pfx-3-grid-4 : $pfx-18-grid-24;
+
+$sfx-1-grid-4 : $sfx-6-grid-24;
+$sfx-2-grid-4 : $sfx-12-grid-24;
+$sfx-3-grid-4 : $sfx-18-grid-24;
+
+/* Box Model
+----------------------------------------------------------------------------------------------------*/
+* {
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Configuração Golbal das Colunas
+----------------------------------------------------------------------------------------------------*/
+.col-1-xl,
+.col-2-xl,
+.col-3-xl,
+.col-4-xl,
+.col-5-xl,
+.col-6-xl,
+.col-7-xl,
+.col-8-xl,
+.col-9-xl,
+.col-10-xl,
+.col-11-xl,
+.col-12-xl,
+.col-13-xl,
+.col-14-xl,
+.col-15-xl,
+.col-16-xl,
+.col-17-xl,
+.col-18-xl,
+.col-19-xl,
+.col-20-xl,
+.col-21-xl,
+.col-22-xl,
+.col-23-xl,
+.col-24-xl,
+.col-1-lg,
+.col-2-lg,    
+.col-3-lg,      
+.col-4-lg,                 
+.col-5-lg,      
+.col-6-lg,      
+.col-7-lg,                 
+.col-8-lg,      
+.col-9-lg,      
+.col-10-lg,                 
+.col-11-lg,     
+.col-12-lg,
+.col-1-md,
+.col-2-md, 
+.col-3-md,    
+.col-4-md,    
+.col-5-md,  
+.col-6-md,   
+.col-7-md,    
+.col-8-md,
+.col-1-sm,
+.col-2-sm,
+.col-3-sm,
+.col-4-sm {
+	display: inline; 
+	float: left;
+	margin-left:  $margin-left;
+	margin-right: $margin-right;
+}
+
+/* Configuração Golbal das Linhas
+----------------------------------------------------------------------------------------------------*/
+.row {
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+
+/* Grid de 4 colunas independente (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+.grid-4 {
+	.row {
+
+		max-width:$max-width-4-cols-grid;
+			.col-1-sm {width: $col-1-grid-4; margin-left:$margin-left; margin-right:$margin-right;}
+		 	.col-2-sm {width: $col-2-grid-4; margin-left:$margin-left; margin-right:$margin-right;} 
+		 	.col-3-sm {width: $col-3-grid-4; margin-left:$margin-left; margin-right:$margin-right;}  
+		 	.col-4-sm {width: $col-4-grid-4; margin-left:$margin-left; margin-right:$margin-right;}
+
+			.pfx-1-sm {margin-left: $pfx-1-grid-4;}
+		 	.pfx-2-sm {margin-left: $pfx-2-grid-4;} 
+		 	.pfx-3-sm {margin-left: $pfx-3-grid-4;}  
+
+			.sfx-1-sm {margin-right: $sfx-1-grid-4;}
+		 	.sfx-2-sm {margin-right: $sfx-2-grid-4;} 
+		 	.sfx-3-sm {margin-right: $sfx-3-grid-4;}
+
+	}
+}
+
+/* Grid de 8 colunas independente (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+.grid-8 {
+	.row {
+
+		max-width:$max-width-8-cols-grid;
+
+			.col-1-md {width:$col-1-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-2-md {width:$col-2-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-3-md {width:$col-3-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-4-md {width:$col-4-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-5-md {width:$col-5-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-6-md {width:$col-6-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-7-md {width:$col-7-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-8-md {width:$col-8-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+
+			.pfx-1-md {margin-left:$pfx-1-grid-8;}
+			.pfx-2-md {margin-left:$pfx-2-grid-8;}
+			.pfx-3-md {margin-left:$pfx-3-grid-8;}
+			.pfx-4-md {margin-left:$pfx-4-grid-8;}
+			.pfx-5-md {margin-left:$pfx-5-grid-8;}
+			.pfx-6-md {margin-left:$pfx-6-grid-8;}
+			.pfx-7-md {margin-left:$pfx-7-grid-8;}
+
+			.sfx-1-md {margin-right:$sfx-1-grid-8;}
+			.sfx-2-md {margin-right:$sfx-2-grid-8;}
+			.sfx-3-md {margin-right:$sfx-3-grid-8;}
+			.sfx-4-md {margin-right:$sfx-4-grid-8;}
+			.sfx-5-md {margin-right:$sfx-5-grid-8;}
+			.sfx-6-md {margin-right:$sfx-6-grid-8;}
+			.sfx-7-md {margin-right:$sfx-7-grid-8;}
+
+	}
+}
+
+/* Grid de 12 colunas independente (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+.grid-12 {
+	.row {
+
+		max-width:$max-width-12-cols-grid;
+
+			.col-1-lg  {width:$col-1-grid-12;  margin-left:$margin-left; margin-right:$margin-right;} 
+			.col-2-lg  {width:$col-2-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}     
+			.col-3-lg  {width:$col-3-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-4-lg  {width:$col-4-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}                  
+			.col-5-lg  {width:$col-5-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-6-lg  {width:$col-6-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-7-lg  {width:$col-7-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}                  
+			.col-8-lg  {width:$col-8-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-9-lg  {width:$col-9-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-10-lg {width:$col-10-grid-12; margin-left:$margin-left; margin-right:$margin-right;}                 
+			.col-11-lg {width:$col-11-grid-12; margin-left:$margin-left; margin-right:$margin-right;}     
+			.col-12-lg {width:$col-12-grid-12; margin-left:$margin-left; margin-right:$margin-right;}
+
+			.pfx-1-lg  {margin-left:$pfx-1-grid-12;} 
+			.pfx-2-lg  {margin-left:$pfx-2-grid-12;}     
+			.pfx-3-lg  {margin-left:$pfx-3-grid-12;}       
+			.pfx-4-lg  {margin-left:$pfx-4-grid-12;}                  
+			.pfx-5-lg  {margin-left:$pfx-5-grid-12;}       
+			.pfx-6-lg  {margin-left:$pfx-6-grid-12;}       
+			.pfx-7-lg  {margin-left:$pfx-7-grid-12;}                  
+			.pfx-8-lg  {margin-left:$pfx-8-grid-12;}       
+			.pfx-9-lg  {margin-left:$pfx-9-grid-12;}       
+			.pfx-10-lg {margin-left:$pfx-10-grid-12;}                 
+			.pfx-11-lg {margin-left:$pfx-11-grid-12;}     
+
+			.sfx-1-lg  {margin-right:$sfx-1-grid-12;} 
+			.sfx-2-lg  {margin-right:$sfx-2-grid-12;}     
+			.sfx-3-lg  {margin-right:$sfx-3-grid-12;}       
+			.sfx-4-lg  {margin-right:$sfx-4-grid-12;}                  
+			.sfx-5-lg  {margin-right:$sfx-5-grid-12;}       
+			.sfx-6-lg  {margin-right:$sfx-6-grid-12;}       
+			.sfx-7-lg  {margin-right:$sfx-7-grid-12;}                  
+			.sfx-8-lg  {margin-right:$sfx-8-grid-12;}       
+			.sfx-9-lg  {margin-right:$sfx-9-grid-12;}       
+			.sfx-10-lg {margin-right:$sfx-10-grid-12;}                 
+			.sfx-11-lg {margin-right:$sfx-11-grid-12;}  
+
+	}
+}
+
+/* Grid de 24 colunas independente
+----------------------------------------------------------------------------------------------------*/
+.grid-24 {
+	.row {
+
+		max-width:$max-width-24-cols-grid;
+
+		.col-1-xl  {width:$col-1-grid-24;}
+		.col-2-xl  {width:$col-2-grid-24;}  
+		.col-3-xl  {width:$col-3-grid-24;}          
+		.col-4-xl  {width:$col-4-grid-24;}
+		.col-5-xl  {width:$col-5-grid-24;}          
+		.col-6-xl  {width:$col-6-grid-24;}          
+		.col-7-xl  {width:$col-7-grid-24;}
+		.col-8-xl  {width:$col-8-grid-24;}          
+		.col-9-xl  {width:$col-9-grid-24;}     
+		.col-10-xl {width:$col-10-grid-24;}
+		.col-11-xl {width:$col-11-grid-24;} 
+		.col-12-xl {width:$col-12-grid-24;} 
+		.col-13-xl {width:$col-13-grid-24;}
+		.col-14-xl {width:$col-14-grid-24;} 
+		.col-15-xl {width:$col-15-grid-24;}     
+		.col-16-xl {width:$col-16-grid-24;}                
+		.col-17-xl {width:$col-17-grid-24;}     
+		.col-18-xl {width:$col-18-grid-24;}     
+		.col-19-xl {width:$col-19-grid-24;}                
+		.col-20-xl {width:$col-20-grid-24;}     
+		.col-21-xl {width:$col-21-grid-24;}     
+		.col-22-xl {width:$col-22-grid-24;}                
+		.col-23-xl {width:$col-23-grid-24;}     
+		.col-24-xl {width:$col-24-grid-24;} 
+
+		.pfx-1-xl  {margin-left:$pfx-1-grid-24;}
+		.pfx-2-xl  {margin-left:$pfx-2-grid-24;}
+		.pfx-3-xl  {margin-left:$pfx-3-grid-24;}
+		.pfx-4-xl  {margin-left:$pfx-4-grid-24;}
+		.pfx-5-xl  {margin-left:$pfx-5-grid-24;}
+		.pfx-6-xl  {margin-left:$pfx-6-grid-24;}
+		.pfx-7-xl  {margin-left:$pfx-7-grid-24;}
+		.pfx-8-xl  {margin-left:$pfx-8-grid-24;}
+		.pfx-9-xl  {margin-left:$pfx-9-grid-24;}
+		.pfx-10-xl {margin-left:$pfx-10-grid-24;}
+		.pfx-11-xl {margin-left:$pfx-11-grid-24;}
+		.pfx-12-xl {margin-left:$pfx-12-grid-24;}
+		.pfx-13-xl {margin-left:$pfx-13-grid-24;}
+		.pfx-14-xl {margin-left:$pfx-14-grid-24;}
+		.pfx-15-xl {margin-left:$pfx-15-grid-24;}
+		.pfx-16-xl {margin-left:$pfx-16-grid-24;}
+		.pfx-17-xl {margin-left:$pfx-17-grid-24;}
+		.pfx-18-xl {margin-left:$pfx-18-grid-24;}
+		.pfx-19-xl {margin-left:$pfx-19-grid-24;}
+		.pfx-20-xl {margin-left:$pfx-20-grid-24;}
+		.pfx-21-xl {margin-left:$pfx-21-grid-24;}
+		.pfx-22-xl {margin-left:$pfx-22-grid-24;}
+		.pfx-23-xl {margin-left:$pfx-23-grid-24;}
+
+		.sfx-1-xl  {margin-right:$sfx-1-grid-24;}
+		.sfx-2-xl  {margin-right:$sfx-2-grid-24;}
+		.sfx-3-xl  {margin-right:$sfx-3-grid-24;}
+		.sfx-4-xl  {margin-right:$sfx-4-grid-24;}
+		.sfx-5-xl  {margin-right:$sfx-5-grid-24;}
+		.sfx-6-xl  {margin-right:$sfx-6-grid-24;}
+		.sfx-7-xl  {margin-right:$sfx-7-grid-24;}
+		.sfx-8-xl  {margin-right:$sfx-8-grid-24;}
+		.sfx-9-xl  {margin-right:$sfx-9-grid-24;}
+		.sfx-10-xl {margin-right:$sfx-10-grid-24;}
+		.sfx-11-xl {margin-right:$sfx-11-grid-24;}
+		.sfx-12-xl {margin-right:$sfx-12-grid-24;}
+		.sfx-13-xl {margin-right:$sfx-13-grid-24;}
+		.sfx-14-xl {margin-right:$sfx-14-grid-24;}
+		.sfx-15-xl {margin-right:$sfx-15-grid-24;}
+		.sfx-16-xl {margin-right:$sfx-16-grid-24;}
+		.sfx-17-xl {margin-right:$sfx-17-grid-24;}
+		.sfx-18-xl {margin-right:$sfx-18-grid-24;}
+		.sfx-19-xl {margin-right:$sfx-19-grid-24;}
+		.sfx-20-xl {margin-right:$sfx-20-grid-24;}
+		.sfx-21-xl {margin-right:$sfx-21-grid-24;}
+		.sfx-22-xl {margin-right:$sfx-22-grid-24;}
+		.sfx-23-xl {margin-right:$sfx-23-grid-24;}
+
+	}
+}
+
+/* Grid de 12 colunas condicional a exsstência de um grid maior (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: $max-width-12-cols-grid) {
+	.grid-12 {
+		.row {
+
+			.col-1-lg  {width:$col-1-grid-12;  margin-left:$margin-left; margin-right:$margin-right;} 
+			.col-2-lg  {width:$col-2-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}     
+			.col-3-lg  {width:$col-3-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-4-lg  {width:$col-4-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}                  
+			.col-5-lg  {width:$col-5-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-6-lg  {width:$col-6-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-7-lg  {width:$col-7-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}                  
+			.col-8-lg  {width:$col-8-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-9-lg  {width:$col-9-grid-12;  margin-left:$margin-left; margin-right:$margin-right;}       
+			.col-10-lg {width:$col-10-grid-12; margin-left:$margin-left; margin-right:$margin-right;}                 
+			.col-11-lg {width:$col-11-grid-12; margin-left:$margin-left; margin-right:$margin-right;}     
+			.col-12-lg {width:$col-12-grid-12; margin-left:$margin-left; margin-right:$margin-right;}
+
+			.pfx-1-lg  {margin-left:$pfx-1-grid-12;} 
+			.pfx-2-lg  {margin-left:$pfx-2-grid-12;}     
+			.pfx-3-lg  {margin-left:$pfx-3-grid-12;}       
+			.pfx-4-lg  {margin-left:$pfx-4-grid-12;}                  
+			.pfx-5-lg  {margin-left:$pfx-5-grid-12;}       
+			.pfx-6-lg  {margin-left:$pfx-6-grid-12;}       
+			.pfx-7-lg  {margin-left:$pfx-7-grid-12;}                  
+			.pfx-8-lg  {margin-left:$pfx-8-grid-12;}       
+			.pfx-9-lg  {margin-left:$pfx-9-grid-12;}       
+			.pfx-10-lg {margin-left:$pfx-10-grid-12;}                 
+			.pfx-11-lg {margin-left:$pfx-11-grid-12;}     
+
+			.sfx-1-lg  {margin-right:$sfx-1-grid-12;} 
+			.sfx-2-lg  {margin-right:$sfx-2-grid-12;}     
+			.sfx-3-lg  {margin-right:$sfx-3-grid-12;}       
+			.sfx-4-lg  {margin-right:$sfx-4-grid-12;}                  
+			.sfx-5-lg  {margin-right:$sfx-5-grid-12;}       
+			.sfx-6-lg  {margin-right:$sfx-6-grid-12;}       
+			.sfx-7-lg  {margin-right:$sfx-7-grid-12;}                  
+			.sfx-8-lg  {margin-right:$sfx-8-grid-12;}       
+			.sfx-9-lg  {margin-right:$sfx-9-grid-12;}       
+			.sfx-10-lg {margin-right:$sfx-10-grid-12;}                 
+			.sfx-11-lg {margin-right:$sfx-11-grid-12;}     
+
+		}	
+	}
+}
+
+/* Grid de 8 colunas condicional a exsstência de um grid maior (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: $max-width-8-cols-grid) {
+	.grid-8 {
+		.row {
+
+			.col-1-md {width:$col-1-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-2-md {width:$col-2-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-3-md {width:$col-3-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-4-md {width:$col-4-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-5-md {width:$col-5-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-6-md {width:$col-6-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-7-md {width:$col-7-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+			.col-8-md {width:$col-8-grid-8; margin-left:$margin-left; margin-right:$margin-right;}
+
+			.pfx-1-md {margin-left:$pfx-1-grid-8;}
+			.pfx-2-md {margin-left:$pfx-2-grid-8;}
+			.pfx-3-md {margin-left:$pfx-3-grid-8;}
+			.pfx-4-md {margin-left:$pfx-4-grid-8;}
+			.pfx-5-md {margin-left:$pfx-5-grid-8;}
+			.pfx-6-md {margin-left:$pfx-6-grid-8;}
+			.pfx-7-md {margin-left:$pfx-7-grid-8;}
+
+			.sfx-1-md {margin-right:$sfx-1-grid-8;}
+			.sfx-2-md {margin-right:$sfx-2-grid-8;}
+			.sfx-3-md {margin-right:$sfx-3-grid-8;}
+			.sfx-4-md {margin-right:$sfx-4-grid-8;}
+			.sfx-5-md {margin-right:$sfx-5-grid-8;}
+			.sfx-6-md {margin-right:$sfx-6-grid-8;}
+			.sfx-7-md {margin-right:$sfx-7-grid-8;}
+			
+		}	
+	}
+}
+
+/* Grid de 4 colunas condicional a exsstência de um grid maior (OBS: Os valores de margin-left e margin-right devem ser resetados para evitar a herença de um grid maior)
+----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: $max-width-4-cols-grid) {
+	.grid-4 {
+		.row {
+
+			.col-1-sm {width: $col-1-grid-4; margin-left:$margin-left; margin-right:$margin-right;}
+		 	.col-2-sm {width: $col-2-grid-4; margin-left:$margin-left; margin-right:$margin-right;} 
+		 	.col-3-sm {width: $col-3-grid-4; margin-left:$margin-left; margin-right:$margin-right;}  
+		 	.col-4-sm {width: $col-4-grid-4; margin-left:$margin-left; margin-right:$margin-right;}
+
+			.pfx-1-sm {margin-left: $pfx-1-grid-4;}
+		 	.pfx-2-sm {margin-left: $pfx-2-grid-4;} 
+		 	.pfx-3-sm {margin-left: $pfx-3-grid-4;}  
+
+			.sfx-1-sm {margin-right: $sfx-1-grid-4;}
+		 	.sfx-2-sm {margin-right: $sfx-2-grid-4;} 
+		 	.sfx-3-sm {margin-right: $sfx-3-grid-4;}  
+
+		}
+	}
+}
+
+/* Da uma quebra de linha, cancelando o fluxo dos elementos flutuante, sem afetar a flutuação das outras divs
+Deve ser chamada em uma div vazia apenas para marcar a quebra de linha.
+ex: <div class = "clear"></div>
+----------------------------------------------------------------------------------------------------*/
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* Propriedades para correção de bugs */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+	content: '.';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after,
+.row:after {
+	clear: both;
+}
